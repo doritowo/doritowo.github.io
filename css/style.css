@@ -1,0 +1,55 @@
+/* Base styling */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+  background-color: #1e1e1e;  /* dark background */
+  color: #f0f0f0;             /* light text */
+  margin: 0;
+  padding: 20px;
+}
+
+/* Header styling */
+header h1 {
+  color: #ff4da6;              /* pink accent */
+  font-size: 2.5rem;
+}
+
+header p {
+  color: #e0b0ff;              /* light purple hint */
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+/* Section styling */
+section h2 {
+  color: #ff6666;              /* red/pink accent */
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #ff4da6;              /* pink link */
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #e0b0ff;              /* hover purple */
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #999;
+}
