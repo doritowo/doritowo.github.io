@@ -1,55 +1,95 @@
-/* Base styling */
+/* GENERAL STYLING */
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  text-align: center;
-  background-color: #1e1e1e;  /* dark background */
-  color: #f0f0f0;             /* light text */
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
   margin: 0;
   padding: 20px;
+  text-align: center;
 }
 
-/* Header styling */
+/* HEADER */
+header {
+  padding: 2rem 1rem;
+}
+
 header h1 {
-  color: #ff4da6;              /* pink accent */
+  color: #ff4da6; /* pink accent */
   font-size: 2.5rem;
 }
 
 header p {
-  color: #e0b0ff;              /* light purple hint */
+  color: #e0b0ff; /* purple hint */
   font-size: 1.2rem;
   margin-top: 5px;
 }
 
-/* Section styling */
-section h2 {
-  color: #ff6666;              /* red/pink accent */
-  margin-bottom: 20px;
+/* ABOUT / LINKS SECTION */
+.about {
+  margin: 3rem 0;
 }
 
-ul {
+.about h2 {
+  color: #00bcd4; /* cyan accent */
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about ul {
   list-style-type: none;
   padding: 0;
 }
 
-li {
-  margin: 15px 0;
+.about li {
+  margin: 1rem 0;
   font-size: 1.1rem;
 }
 
-a {
+.about a {
   text-decoration: none;
-  color: #ff4da6;              /* pink link */
+  color: #ff4da6;
   transition: color 0.2s;
 }
 
-a:hover {
-  color: #e0b0ff;              /* hover purple */
+.about a:hover {
+  color: #e0b0ff;
   text-decoration: underline;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-  margin-top: 50px;
+  margin-top: 5rem;
   font-size: 0.9rem;
-  color: #999;
+  color: #888;
+}
+/* PROJECTS SECTION */
+.projects {
+  margin: 3rem 0;
+}
+
+.projects h2 {
+  color: #ff4da6; /* pink accent */
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.projects ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.projects li {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.projects a {
+  text-decoration: none;
+  color: #00bcd4; /* cyan links for projects */
+  transition: color 0.2s;
+}
+
+.projects a:hover {
+  color: #e0b0ff;
+  text-decoration: underline;
 }

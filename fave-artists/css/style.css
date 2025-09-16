@@ -1,0 +1,98 @@
+/* === Base Styling === */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  color: #f0f0f0;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+}
+
+/* === Header === */
+header {
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #ff4da6;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 6px rgba(255,77,166,0.5);
+}
+
+/* === Blurb / Sections === */
+.blurb, .lyrics, .spotify, .cta {
+  background: #2a2a2a;
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  margin-bottom: 30px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blurb:hover, .lyrics:hover, .spotify:hover, .cta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.6);
+}
+
+/* === Lyrics Section === */
+.lyrics blockquote {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #00bcd4;
+  margin: 0;
+}
+
+.lyrics span {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #888;
+}
+
+/* === Spotify Section === */
+.spotify p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.spotify-icon {
+  width: 60px;
+  transition: transform 0.2s, filter 0.2s;
+  cursor: pointer;
+}
+
+.spotify-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px #00ffcc);
+}
+
+/* === Buttons / CTA === */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, #ff4da6, #e0b0ff);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #e0b0ff, #ff4da6);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+/* === Footer === */
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #999;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
