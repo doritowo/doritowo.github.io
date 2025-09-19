@@ -1,0 +1,133 @@
+/* Reset */
+body, h1, h2, p, blockquote, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* General body style */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #111 60%, #1a001a 100%); /* dark with purple undertone */
+    color: #f5f5f5;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+header h1 {
+    font-size: 2.5rem;
+    color: #ff00c8; /* neon purple */
+    text-shadow: 0 0 10px rgba(255, 0, 200, 0.7);
+    animation: neonPulse 3s infinite alternate;
+}
+
+/* Film section grid */
+.films {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Each film card */
+.film {
+    background: #1a1a1f; /* deep grey-purple card */
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(255, 0, 200, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.film:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 0, 200, 0.6);
+    animation: cardGlow 1.5s infinite alternate;
+}
+
+.film img {
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Film title */
+.film h2 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    color: #ff00c8;
+    text-shadow: 0 0 6px rgba(255, 0, 200, 0.6);
+}
+
+/* Star rating */
+.rating {
+    font-size: 1.2rem;
+    color: gold;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+    margin-bottom: 5px;
+    animation: starPulse 2s infinite alternate;
+}
+
+/* Quote */
+blockquote {
+    font-style: italic;
+    margin: 10px 0;
+    padding-left: 10px;
+    border-left: 3px solid #ff00c8; /* purple accent bar */
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+blockquote:hover {
+    color: #ffbdf5;
+    text-shadow: 0 0 6px rgba(255, 0, 200, 0.5);
+}
+
+/* Genre */
+.genre {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+}
+footer a {
+    color: #ff00c8;
+    text-decoration: none;
+    text-shadow: 0 0 6px rgba(255, 0, 200, 0.6);
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes neonPulse {
+    from {
+        text-shadow: 0 0 5px rgba(255, 0, 200, 0.5);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 0, 200, 1);
+    }
+}
+
+@keyframes starPulse {
+    from {
+        text-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
+    }
+    to {
+        text-shadow: 0 0 16px rgba(255, 215, 0, 1);
+    }
+}
+
+@keyframes cardGlow {
+    from {
+        box-shadow: 0 0 10px rgba(255, 0, 200, 0.3);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(255, 0, 200, 0.8);
+    }
+}
