@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +8,48 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <!-- HEADER -->
-  <header>
-  <h1>HOLAAAA! I'm Kayegee :3</h1>
-  <p id="fun-line">Something about me</p>
-</header>
 
-  <!-- ABOUT ME / LINKS SECTION -->
+<body>
+  <!-- NAVIGATION -->
+  <nav>
+    <h1 class="logo">Kyle Crisostomo</h1>
+    <ul class="nav-links">
+      <li><a href="about/index.html">About Me</a></li>
+      <li><a href="projects/index.html">Projects</a></li>
+      <li><a href="cv/index.html" target="_blank">CV</a></li>
+      <li><button id="darkToggle">🌙</button></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <img src="images/me.jpg" alt="Literally me " class="profile-pic">
+    <h2>Hey, I'm Kyle </h2>
+    <p>Aspiring developer, gamer, and creator. Building small experiments, exploring design, and having fun along
+      the way.</p>
+  </header>
+
+  <!-- CV-LIKE ABOUT -->
   <section class="about">
-    <h2>About Me & Interests</h2>
+    <h2>What I Do</h2>
     <ul>
-      <li><a href="fave-artists/index.html">Favorite Artists</a></li>
-      <li><a href="fave-films/index.html">Favorite Films</a></li>
-      <li><a href="fave-games/index.html">Favorite Games</a></li>
+      <li> Web Development (HTML, CSS, JavaScript, Python/Flask)</li>
+      <li> Passionate about Games, Music, and Media</li>
+      <li> Background in Biology + Teaching </li>
     </ul>
   </section>
 
-  <!-- PROJECTS SECTION -->
+  <!-- PROJECTS -->
   <section class="projects">
-    <h2>Projects</h2>
+    <h2>Highlighted Projects</h2>
     <ul>
       <li>
-        <a href="https://github.com/doritowo/flask-roaster" target="_blank">
-          Flask Roaster
-        </a> - Fun web app that roasts your name. (Experimental lol)
+        <a href="https://github.com/doritowo/flask-roaster" target="_blank">Flask Roaster</a> - Fun web app that
+        roasts your name.
       </li>
       <li>
-        <a href="https://github.com/doritowo/pytoys" target="_blank">
-          PyToys
-        </a> - Small Python experiments (ATM, To-Do List GUI, Spotipy tester).
+        <a href="https://github.com/doritowo/pytoys" target="_blank">PyToys</a> - Python experiments (ATM, To-Do
+        GUI, Spotipy tester).
       </li>
     </ul>
   </section>
@@ -45,8 +58,7 @@
   <footer>
     <p>© 2025 Kyle Gabriel Crisostomo</p>
   </footer>
-
   <script src="js/script.js"></script>
-
 </body>
+
 </html>
