@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Tech Roadmap</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Interactive Tech Roadmap</h1>
+        <div class="flowchart" id="chart-container">
+            <div class="mermaid" id="roadmap">
+                graph TD
+                Entry["<img src='icons/stairs.png' width='24'> Entry Level"]
+
+                %% Dev Branch
+                Entry --> Junior["<img src='icons/dev.png' width='24'> Junior Developer<br>Skills: HTML, CSS, JS"]
+                Junior --> Mid["<img src='icons/development.png' width='24'> Mid-Level Developer<br>Skills: JS, Git,
+                APIs"]
+                Mid --> Senior["<img src='icons/professional-development.png' width='24'> Senior Developer<br>Skills:
+                Advanced JS,
+                Frameworks"]
+                Senior --> Lead["<img src='icons/technology.png' width='24'> Tech Lead<br>Skills:
+                Architecture, Mentoring"]
+                Lead --> CTO["<img src='icons/manager.png' width='24'> CTO<br>Skills: Leadership, Strategy"]
+                Junior --> GameDev["<img src='icons/gamedev.png' width='24'> Game Developer<br>Skills: Unity/Unreal, C#
+                / C++"]
+                GameDev --> GameProjects["<img src='icons/spaceship.png' width='24'> Small Game Projects"]
+
+                %% Data Branch
+                Entry --> Analyst["<img src='icons/analyst.png' width='24'> Data Analyst<br>Skills: Excel, SQL"]
+                Analyst --> Statistics["<img src='icons/description.png' width='24'> Statistics<br>Probability,
+                Distributions"]
+                Statistics --> ExcelSkills["<img src='icons/excel.png' width='24'> Excel<br>Pivot, Formulas, Charts"]
+                ExcelSkills --> SQLSkills["<img src='icons/sql.png' width='24'> SQL<br>Joins, Queries"]
+                SQLSkills --> PythonSkills["<img src='icons/python.png' width='24'> Python<br>Pandas, Numpy"]
+                PythonSkills --> DataViz["<img src='icons/vr.png' width='24'> Data Visualization<br>Matplotlib,
+                Tableau"]
+                DataViz --> BITools["<img src='icons/bi.png' width='24'> BI Tools<br>Power BI, Looker"]
+                BITools --> DataScientist["<img src='icons/datasci.png' width='24'> Data Scientist<br>ML Basics,
+                Predictive Modeling"]
+
+                %% Teaching/Research Branch
+                Entry --> Mentor["<img src='icons/mentor.png' width='24'> Teaching / Mentoring<br>Curriculum Design"]
+                Mentor --> Workshops["<img src='icons/wrench.png' width='24'> Workshops & Sessions<br>Presentation
+                Skills"]
+                Mentor --> Researcher["<img src='icons/researcher.png' width='24'> Researcher<br>Critical Thinking,
+                Writing"]
+                Researcher --> Papers["<img src='icons/study.png' width='24'> Academic Papers<br>Publishing"]
+                Researcher --> Conferences["<img src='icons/conference.png' width='24'> Conferences /
+                Presentations<br>Networking"]
+
+                %% Class Definitions
+                classDef dev fill:#4f92ff,stroke:#1f4db7,stroke-width:2px,color:#fff;
+                classDef data fill:#2ecc71,stroke:#27ae60,stroke-width:2px,color:#fff;
+                classDef research fill:#e67e22,stroke:#d35400,stroke-width:2px,color:#fff;
+
+                %% Assign classes to nodes
+                class Junior,Mid,Senior,Lead,CTO,GameDev,GameProjects dev;
+                class Analyst,Statistics,ExcelSkills,SQLSkills,PythonSkills,DataViz,BITools,DataScientist data;
+                class Mentor,Workshops,Researcher,Papers,Conferences research;
+            </div>
+        </div>
+    </div>
+
+    <!-- Mermaid.js -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: false,
+                nodeSpacing: 80,
+                rankSpacing: 120
+            }
+        });
+    </script>
+
+    <!-- SVG Pan & Zoom -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg-pan-zoom/3.6.1/svg-pan-zoom.min.js"></script>
+    <script type="module" src="js/script.js"></script>
+
+    <!-- Modal for node clicks -->
+    <div id="nodeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+</body>
+
+</html>
