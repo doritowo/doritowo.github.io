@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About Me — Kyle Crisostomo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <h1 class="logo"><a href="../index.html">Kyle Crisostomo</a></h1>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects/index.html">Projects</a></li>
+            <li><a href="../cv/index.html">CV</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <h2>About Me</h2>
+        <p>Here's a closer look at the stuff I love — films, games, and artists that inspire me.</p>
+    </header>
+
+    <!-- ABOUT NAVIGATION GRID -->
+    <main class="container">
+        <section class="grid-features">
+            <article class="feature-card">
+                <img src="images/films-thumb.png" alt="Films thumbnail" class="thumb">
+                <h3><a href="fave-films/index.html">Favorite Films</a></h3>
+                <p>Movies and directors that left an impact on me.</p>
+            </article>
+
+            <article class="feature-card">
+                <img src="images/games-thumb.png" alt="Games thumbnail" class="thumb">
+                <h3><a href="fave-games/index.html">Favorite Games</a></h3>
+                <p>Games I keep coming back to, from indies to classics.</p>
+            </article>
+
+            <article class="feature-card">
+                <img src="images/artists-thumb.png" alt="Artists thumbnail" class="thumb">
+                <h3><a href="fave-artists/index.html">Favorite Artists</a></h3>
+                <p>Musicians and creators that shape my playlists.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© <span id="year"></span> Kyle Gabriel Crisostomo</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // auto-update year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

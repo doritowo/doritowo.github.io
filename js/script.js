@@ -1,24 +1,45 @@
-// script.js
+// NAV TOGGLE FOR MOBILE
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelector(".nav-links");
 
-const funLines = [
-  " YOUR MAMA!",
-  " Powered by energen and chaotic playlists.",
-  " Bard, The Wandering Caretaker ",
-  " I love you clairo <3 ",
-  " Onee-chan, haaiii "
-];
+  // Create hamburger button
+  const toggleBtn = document.createElement("div");
+  toggleBtn.classList.add("menu-toggle");
+  toggleBtn.innerHTML = "☰";
+  document.querySelector("nav").appendChild(toggleBtn);
 
-const funLineEl = document.getElementById("fun-line");
-let index = 0;
+  toggleBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
 
-// Show the first line initially
-funLineEl.textContent = funLines[index];
+  // Auto year in footer
+  const footer = document.querySelector("footer p");
+  if (footer) {
+    const year = new Date().getFullYear();
+    footer.innerHTML = `© ${year} Kyle Gabriel Crisostomo`;
+  }
+});
+// Minimal JS: rotates a small footer quote every few seconds
 
-// Function to show next line
-function showNextLine() {
-  index = (index + 1) % funLines.length; // loop back to start
-  funLineEl.textContent = funLines[index];
+const toggleBtn = document.getElementById("darkToggle");
+
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    // switch icon
+    if (document.body.classList.contains("dark-mode")) {
+      toggleBtn.textContent = "☀️";
+      localStorage.setItem("theme", "dark");
+    } else {
+      toggleBtn.textContent = "🌙";
+      localStorage.setItem("theme", "light");
+    }
+  });
+
+  // load saved theme
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    toggleBtn.textContent = "☀️";
+  }
 }
-
-// Change line every 3 seconds (3000 ms)
-setInterval(showNextLine, 3000);

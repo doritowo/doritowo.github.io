@@ -1,0 +1,142 @@
+/* ===== Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: #f5f7fa;
+    color: #333;
+    padding: 20px;
+}
+
+/* ===== Header ===== */
+.cv-header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #0077b6;
+}
+
+.cv-header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.cv-header p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.cv-header nav a {
+    text-decoration: none;
+    color: #0077b6;
+    font-weight: 500;
+}
+
+.cv-header nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Main Content ===== */
+.cv-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cv-content section {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.cv-content h2 {
+    font-size: 1.4rem;
+    color: #0077b6;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #0077b6;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.cv-content ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.cv-content ul li {
+    margin-bottom: 0.6rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.cv-content ul li::before {
+    content: "•";
+    color: #0077b6;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* ===== Links ===== */
+a {
+    color: #0077b6;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #023e8a;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .cv-header,
+body.dark-mode .cv-content section {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode h2 {
+    color: #90e0ef;
+    border-color: #90e0ef;
+}
+
+body.dark-mode a {
+    color: #90e0ef;
+}
+
+body.dark-mode a:hover {
+    color: #00b4d8;
+}
